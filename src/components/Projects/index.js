@@ -2,15 +2,15 @@
 import React, { useState } from 'react'
 import { useSprings, animated, to } from 'react-spring'
 import { useGesture } from 'react-use-gesture'
-// import '../../../src/styles.css' 
+import '../../../src/styles.css' 
 
-const cards = 
-  
-  ['../logo192.png',
-  '../run_buddy.jpg',
-  '../logo512.png' ,
-  '../surf_report.jpg',
-  '../website1.png' ]
+const cards = [
+    '../Scheduler',
+    '../eCommerce.png',
+    '../booksAndBeans.png',
+    '../weatherDash',
+    '../techBlog.png',
+    '../website1.png' ]
 
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css

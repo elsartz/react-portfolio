@@ -16,7 +16,7 @@ body {
   overflow: hidden;
 }
 
-#root {
+.root {
   background: lightblue;
   position: fixed;
   overflow: hidden;
@@ -25,7 +25,7 @@ body {
   cursor: url('https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png') 39 39, auto;
 }
 
-#root > div {
+.root > div {
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -35,7 +35,7 @@ body {
   justify-content: center;
 }
 
-#root > div > div {
+.root > div > div {
   background-color: white;
   background-size: auto 85%;
   background-repeat: no-repeat;

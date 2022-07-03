@@ -15,7 +15,7 @@ function App() {
   
   const divNav = () => {
     return (
-      <div className="">
+      <div className="main">
         <Nav 
                   projectsSelected={projectsSelected}
                   setProjectsSelected={setProjectsSelected}
@@ -41,7 +41,7 @@ function App() {
             return (
               <div>
                 {divNav()}
-                <main>
+                <main className="root">
                   <Projects/>              
                 </main>
                   <Footer/>
