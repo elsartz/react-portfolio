@@ -3,39 +3,71 @@ import React , {useState} from 'react';
 import Nav from './components/Nav';
 import About from './components/About';
 import Projects from "./components/Projects";
+import Resume from './components/Resume'
 import ContactForm from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
-  const  [categories] = useState([
-   
-    { name: 'Portfolio', description: 'My projects so far...' },
-   
-    { name: 'Resume', description: 'my bio in general' }
-  ]);
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
+  
   const [contactSelected, setContactSelected] = useState(false);
-
-  return (
-    <div>
-      <Nav 
-        categories={categories}
-        setCurrentCategory={setCurrentCategory}
-        currentCategory={currentCategory}
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected} />
-      <main>
-         {!contactSelected ? (
-                <>
-                  {/* <Gallery currentCategory={currentCategory}></Gallery> */}
-                  {/* <Projects /> */}
-                  <About></About> 
-                </>
-              ) : (
-                  <ContactForm></ContactForm>
-            )}      
-      </main>
-    </div>
-  );
+  const [projectsSelected, setProjectsSelected] = useState(false);
+  const [resumeSelected, setResumeSelected] = useState(false);
+  
+  const divNav = () => {
+    return (
+      <div className="">
+        <Nav 
+                  projectsSelected={projectsSelected}
+                  setProjectsSelected={setProjectsSelected}
+                  resumeSelected={resumeSelected}
+                  setResumeSelected={setResumeSelected}
+                  contactSelected={contactSelected}
+                  setContactSelected={setContactSelected} />
+      </div>
+    )
+  }
+  
+          if (contactSelected) {
+            return (
+              <div>
+                {divNav()}
+                <main>
+                  <ContactForm/>              
+                </main>
+                  <Footer/>
+              </div>
+            )
+          } else if (projectsSelected) {
+            return (
+              <div>
+                {divNav()}
+                <main>
+                  <Projects/>              
+                </main>
+                  <Footer/>
+              </div>
+            )
+          } else if (resumeSelected) {
+            return (
+              <div>
+                {divNav()}
+                <main>
+                  <Resume/>              
+                </main>
+                 
+              </div>
+            )
+          } else {
+            return (
+              <div>
+                {divNav()}
+                <main>
+                  <About/>              
+                </main>
+                  <Footer/>
+              </div>
+            )
+          }
 }
 
 export default App;
