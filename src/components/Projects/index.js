@@ -44,6 +44,7 @@ function Projects() {
       {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
       <animated.div {...bind(i)} style={{ transform: to([rot, scale], trans), backgroundImage: `url(${cards[i]})` }} />
     </animated.div>
+   
   ))
 }
 

@@ -1,16 +1,19 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faThumbsUp, faArrowCircleUp } from '@fortawesome/free-solid-svg-icons';
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+// import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 function Footer() {
 
   return (
     <footer className="App">
-      <FontAwesomeIcon icon={solid('user-secret')} />
-       Copyright by <a href="http://github.com/elsartz">Vardis Sartzetakis </a> 2022
-    {/* <FontAwesomeIcon icon={brands('twitter')} /> */}
+      
+      <p>2022 Copyright by Vardis Sartzetakis </p>  
+
     <FontAwesomeIcon icon={faThumbsUp} />
+    <a href="http://github.com/elsartz"> GitHub  </a> 
+    <a href="https://www.linkedin.com/in/vardis-sartzetakis/">LinkedIn </a> 
+    <a href="https://stackoverflow.com/users/16379388/elsartz">StackOverflow</a> 
   </footer>
   )
 }

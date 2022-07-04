@@ -5,7 +5,7 @@ function Resume() {
 
   return (
     <section className="my-5" >
-      <h1 id="Resume">my bio in general</h1>
+      <h1 id="Resume">...latest news</h1>
       
       <div className="my-2">
         <p>
@@ -13,7 +13,7 @@ function Resume() {
       </p>
       </div>
       <div>
-        <button><a href="https://docs.google.com/document/d/1Js8rx4eD9iJdsRXp07L8cKXn5J4wFQFl/edit?usp=sharing&ouid=115426358683394332298&rtpof=true&sd=true">Download .pdf</a></button> 
+        <a href="https://docs.google.com/document/d/1Js8rx4eD9iJdsRXp07L8cKXn5J4wFQFl/edit?usp=sharing&ouid=115426358683394332298&rtpof=true&sd=true">Download .pdf</a> 
       </div>
     </section>
   )

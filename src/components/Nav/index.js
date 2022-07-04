@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 function Nav(props) {
   const { 
@@ -30,7 +30,7 @@ function Nav(props) {
             </a>
           </li>
          
-          <li className="mx-2">
+          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
             <a href="#contact" onClick={() => {
                 setContactSelected(true)
                 setResumeSelected(false)

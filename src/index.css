@@ -136,12 +136,14 @@ code {
     opacity: .8;
   }
   
+
   img {
     max-width: 100%;
   }
   
-  span[role="img"] {
-    cursor: default;
+  span {
+    font-size: 60px;
+    
   }
   
   form {
@@ -168,6 +170,7 @@ code {
   
   nav a:hover {
     text-decoration: none;
+    color: var(--secondary);
   }
   
   nav  li {

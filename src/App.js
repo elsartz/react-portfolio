@@ -44,7 +44,15 @@ function App() {
                 <main className="root">
                   <Projects/>              
                 </main>
-                  <Footer/>
+                  {/* <Footer/> */}
+                  <div>
+                    <button>Movies & Shows</button>
+                    <button>Books And Beans</button>
+                    <button>eCommerce</button>
+                    <button>Weather Dashboard</button>
+                    <button>techBlog</button>
+                    <button>Day Scheduler</button>
+                  </div>
               </div>
             )
           } else if (resumeSelected) {
