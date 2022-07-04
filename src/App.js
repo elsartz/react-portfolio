@@ -46,7 +46,7 @@ function App() {
                 </main>
                   {/* <Footer/> */}
                   <div>
-                    <button>Movies & Shows</button>
+                    <button onClick={() => {document.location.href='https://elsartz.github.io/movies-tv-shows/'}}>Movies & Shows</button>
                     <button>Books And Beans</button>
                     <button>eCommerce</button>
                     <button>Weather Dashboard</button>
