@@ -41,18 +41,22 @@ function App() {
             return (
               <div>
                 {divNav()}
-                <main className="root">
-                  <Projects/>              
-                </main>
-                  {/* <Footer/> */}
-                  <div>
-                    <button onClick={() => {document.location.href='https://elsartz.github.io/movies-tv-shows/'}}>Movies & Shows</button>
-                    <button>Books And Beans</button>
+                <main >
+                 <div className="rootCard">
+                    <Projects/> 
+                 </div>
+                 {/* <div>
+                    <button className="button" onClick={() => {document.location.href='https://elsartz.github.io/movies-tv-shows/'}}>Movies & Shows</button>
+                    <a className="button" href="https://github.com/"> Books And Beans</a>
                     <button>eCommerce</button>
                     <button>Weather Dashboard</button>
                     <button>techBlog</button>
                     <button>Day Scheduler</button>
-                  </div>
+                  </div>   */}
+                        
+                </main>
+                  {/* <Footer/> */}
+                  
               </div>
             )
           } else if (resumeSelected) {

@@ -4,6 +4,7 @@ import { useSprings, animated, interpolate } from 'react-spring'
 import { useGesture } from 'react-use-gesture'
 import '../../../src/styles.css' 
 
+
 const cards = [
     '../Scheduler.png',
     '../eCommerce.png',
@@ -38,14 +39,30 @@ function Projects() {
     if (!down && gone.size === cards.length) setTimeout(() => gone.clear() || set(i => to(i)), 600)
   })
   // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
-  return props.map(({ x, y, rot, scale }, i) => (
+  return (
+    <React.Fragment>
+      <div>
+          <button className="button" onClick={() => {document.location.href='https://elsartz.github.io/movies-tv-shows/'}}>Movies & Shows</button>
+          <button className="button" onClick={() => {document.location.href='https://book-and-beans.herokuapp.com/'}}>Books And Beans</button>
+          <button className="button" onClick={() => {document.location.href='https://www.youtube.com/watch?v=KYfFfXbpu_4&ab_channel=VardisSartzetakis'}}>eCommerce</button>
+          <button className="button" onClick={() => {document.location.href='https://elsartz.github.io/Weather-dashboard/'}}>Weather Dashboard</button>
+          <button className="button" onClick={() => {document.location.href='https://infinite-cove-67044.herokuapp.com/'}}>techBlog</button>
+          <button className="button" onClick={() => {document.location.href='https://elsartz.github.io/What-s-today-s-plan-/'}}>Day Scheduler</button>
+      </div> 
+      <div className="root">
+        { props.map(({ x, y, rot, scale }, i) => (
 
-    <animated.div key={i} style={{ transform: interpolate([x, y], (x, y) => `translate3d(${x}px,${y}px,0)`) }}>
-      {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
-      <animated.div {...bind(i)} style={{ transform: interpolate([rot, scale], trans), backgroundImage: `url(${cards[i]})` }} />
-    </animated.div>
-   
-  ))
+          <animated.div key={i} style={{ transform: interpolate([x, y], (x, y) => `translate3d(${x}px,${y}px,0)`) }}>
+            
+            {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
+            <animated.div {...bind(i)} style={{ transform: interpolate([rot, scale], trans), backgroundImage: `url(${cards[i]})` }} />
+            
+          </animated.div>
+          
+        ))}
+        </div>
+    </React.Fragment>
+  )
 }
 
 export default Projects;
