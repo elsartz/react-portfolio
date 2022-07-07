@@ -12,10 +12,10 @@ function Nav(props) {
 
 
   return (
-    <header data-testid="header" className="flex-row px-1">
+    <header data-testid="header" className="flex-row space-between px-1">
       <h2>
         <a data-testid="link" href="/">
-          Vardis
+          VardiS
         </a>
       </h2>
       <nav>

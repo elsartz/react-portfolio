@@ -41,7 +41,7 @@ function Projects() {
   // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
   return (
     <React.Fragment>
-      <div>
+      <div className="flex-row space-between">
           <button className="button" onClick={() => {document.location.href='https://elsartz.github.io/movies-tv-shows/'}}>Movies & Shows</button>
           <button className="button" onClick={() => {document.location.href='https://book-and-beans.herokuapp.com/'}}>Books And Beans</button>
           <button className="button" onClick={() => {document.location.href='https://www.youtube.com/watch?v=KYfFfXbpu_4&ab_channel=VardisSartzetakis'}}>eCommerce</button>

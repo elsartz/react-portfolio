@@ -25,8 +25,7 @@ function App() {
                   setContactSelected={setContactSelected} />
       </div>
     )
-  }
-  
+  }  
           if (contactSelected) {
             return (
               <div>
@@ -42,21 +41,10 @@ function App() {
               <div>
                 {divNav()}
                 <main >
-                 <div className="rootCard">
-                    <Projects/> 
-                 </div>
-                 {/* <div>
-                    <button className="button" onClick={() => {document.location.href='https://elsartz.github.io/movies-tv-shows/'}}>Movies & Shows</button>
-                    <a className="button" href="https://github.com/"> Books And Beans</a>
-                    <button>eCommerce</button>
-                    <button>Weather Dashboard</button>
-                    <button>techBlog</button>
-                    <button>Day Scheduler</button>
-                  </div>   */}
-                        
-                </main>
-                  {/* <Footer/> */}
-                  
+                  <div className="rootCard">
+                      <Projects/> 
+                  </div>
+                </main>                  
               </div>
             )
           } else if (resumeSelected) {
@@ -65,8 +53,7 @@ function App() {
                 {divNav()}
                 <main>
                   <Resume/>              
-                </main>
-                 
+                </main>                 
               </div>
             )
           } else {

@@ -18,7 +18,7 @@ code {
   main {
     margin: 0 auto;
     max-width: 90%;
-    padding: 50px 30px;
+    padding: 10px 30px;
   }
   :root {
     --primary: #8c54ff;
@@ -73,7 +73,7 @@ code {
   }
   
   h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   
   h3 {
