@@ -8,7 +8,7 @@ function Resume() {
       <h1 id="Resume">...latest news</h1>
       
       <div className="my-2">
-        <p>
+        <p align="justify">
         In my repository there are projects where you can have a look of my recent activity working in a group or individually to create web sites or applications on HTML or Node.js. The demands of the boot camp was to make REST API’s and also interactive MERN stack single-page applications. Technologies like Dev Tools, Git, ORM, JSON it was necessary to involve in daily bases.
       </p>
       </div>
