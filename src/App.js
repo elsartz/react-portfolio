@@ -41,7 +41,7 @@ function App() {
               <div>
                 {divNav()}
                 <main >
-                  <div className="rootCard">
+                  <div>
                       <Projects/> 
                   </div>
                 </main>                  
