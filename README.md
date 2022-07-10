@@ -2,8 +2,7 @@
   # REACT Portfolio
   
   ## Portfolio made with REACT
-  
-  > undefined
+
 
   ## Table of Contents
   - [Installation](#installation)
