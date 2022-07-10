@@ -27,6 +27,8 @@
 
   # Tests
     Here is an example:
+    
+  ![MyReactPortfolio](https://github.com/elsartz/react-portfolio/blob/main/img/my-react-portfolio.gif)
 
   # Questions
   If you have any questions, please contact me at [email](mailto:elsartz@gmail.com).
