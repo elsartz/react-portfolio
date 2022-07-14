@@ -6,12 +6,12 @@ import '../../../src/styles.css'
 
 
 const cards = [
-    '../Scheduler.png',
+    'Scheduler.png',
     '../eCommerce.png',
-    '../booksAndBeans.png',
-    '../weatherDash.png',
-    '../techBlog.png',
-    '../website1.png' ]
+    './booksAndBeans.png',
+    './weatherDash.png',
+    './techBlog.png',
+    './website1.png' ]
 
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
