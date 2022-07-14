@@ -7,7 +7,7 @@ import '../../../src/styles.css'
 
 const cards = [
     'Scheduler.png',
-    '../eCommerce.png',
+    './eCommerce.png',
     './booksAndBeans.png',
     './weatherDash.png',
     './techBlog.png',
