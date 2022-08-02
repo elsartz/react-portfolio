@@ -11,7 +11,8 @@ const cards = [
     './booksAndBeans.png',
     './weatherDash.png',
     './techBlog.png',
-    './website1.png' ]
+    './website1.png',
+    './WatzCookin.png' ]
 
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
@@ -48,6 +49,7 @@ function Projects() {
           <button className="button" onClick={() => {document.location.href='https://elsartz.github.io/Weather-dashboard/'}}>Weather Dashboard</button>
           <button className="button" onClick={() => {document.location.href='https://infinite-cove-67044.herokuapp.com/'}}>techBlog</button>
           <button className="button" onClick={() => {document.location.href='https://elsartz.github.io/What-s-today-s-plan-/'}}>Day Scheduler</button>
+          <button className="button" onClick={() => {document.location.href='https://watz-cookin.herokuapp.com/'}}>Watz Cook'n</button>
       </div> 
       <div className="root">
         { props.map(({ x, y, rot, scale }, i) => (
