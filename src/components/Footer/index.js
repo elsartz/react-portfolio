@@ -8,7 +8,7 @@ function Footer() {
   return (
     <footer className="App">
       
-      <p>2022 Copyright by Vardis Sartzetakis </p>  
+      <p>2022 Copyright by Vardis Sartzetakis </p>  <span><h6>email:</h6>elsartz@gmail.com</span>
 
     <FontAwesomeIcon icon={faThumbsUp} />
     <a href="http://github.com/elsartz"> GitHub  </a> 
