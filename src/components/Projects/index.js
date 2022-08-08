@@ -19,48 +19,109 @@ const work = [
       {
         id: 'Movies & Shows',
         description: 'Search for movies & TV shows',
+        tech: [
+          'Node.js',
+          'Rest API Http request protocol',
+          'HTML 5',
+          'CCS',
+          'jQuery',
+          'Bulma',
+          'FontAwesomeIcon'
+        ],
         github: 'https://github.com/elsartz/movies-tv-shows',
         liveUrl: 'https://sophoanmeas.github.io/movies-tv-shows/index.html'
       },
       {
         id: 'Weather Dashboard',
         description: 'Weather forecast for several cities',
+        tech: [
+          'VS Code',
+          'Javascript',
+          'OpenWeather API',
+          'CSS3',
+          'Google fonts',
+          'moment.js'
+        ],
         github: 'https://github.com/elsartz/Weather-dashboard',
         liveUrl: 'https://elsartz.github.io/Weather-dashboard/'
       },
       {
         id: 'Tech Blog',
         description: 'Another social chat room',
+        tech: [
+          'Node.js',
+          'ExpressJS',
+          'MySQL2',
+          'Sequelize',
+          'Handlebars',
+          'BCrypt'
+        ],
         github: 'https://github.com/elsartz/tech-blog',
         liveUrl: 'https://infinite-cove-67044.herokuapp.com/'
       },
       {
         id: 'Day Scheduler',
         description: 'All-day scheduler',
+        tech: [
+          'Node',
+          'VS',
+          'HTML5',
+          'CSS3',
+          'bootstrap'
+        ],
         github: 'https://github.com/elsartz/What-s-today-s-plan-',
         liveUrl: 'https://elsartz.github.io/What-s-today-s-plan-/'
       },
       {
         id: 'Book & Beans',
         description: 'A social application which joins book readers with their favorite coffee shop.',
+        tech: [
+          'Javascript',
+          'Handlebars',
+          'Express-session',
+          'nodemon',
+          'dotenv',
+          'Heroku'
+        ],
         github: 'https://github.com/elsartz/Book-Beans',
         liveUrl: 'https://book-and-beans.herokuapp.com/'
       },
       {
         id: "Watz Cook'n",
         description: 'Search engine for nice recipes',
+        tech: [
+          'React',
+          'Concurrently',
+          'Herokuapp',
+          'Apollo server',
+          'GraphQL',
+          'Material-ui',
+          'Bootstrap',
+          'JWT-decode',
+          'Splidejs',
+          'Emotion'          
+        ],
         github: 'https://github.com/elsartz/watz-cook-n',
         liveUrl: 'https://watz-cookin.herokuapp.com/'
       },
       {
         id: 'eCommerce',
         description: 'A fully working back-end database system for a retail site.',
+        tech: [
+          'Javascript 100%',
+          'ExpressJS',
+          'MySQL2',
+          'Sequelize - ORM',
+          'Insomnia',
+          'YouTube'
+        ],
         github: 'https://github.com/elsartz/ecommerce-back-end',
         liveUrl: 'https://www.youtube.com/watch?v=KYfFfXbpu_4&ab_channel=VardisSartzetakis'
       }
     ]
 
-let chosenProject = {}
+let chosenProject = {};
+let technologies = [];
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = i => ({ x: 0, y: i * -4, scale: 1, rot: -10 + Math.random() * 20, delay: i * 100 })
@@ -93,13 +154,48 @@ function Projects() {
     <>
     <React.Fragment>
       <div className="flex-row space-between">         
-          <button className="button" onClick={() => {chosenProject = work[0]; setShowModal(true)}}>Movies & Shows</button>         
-          <button className="button" onClick={() => {chosenProject = work[1]; setShowModal(true)}}>Weather Dashboard</button>         
-          <button className="button" onClick={() => {chosenProject = work[2]; setShowModal(true)}}>techBlog</button>         
-          <button className="button" onClick={() => {chosenProject = work[3]; setShowModal(true)}}>Day Scheduler</button>         
-          <button className="button" onClick={() => {chosenProject = work[4]; setShowModal(true)}}>Books And Beans</button>         
-          <button className="button" onClick={() => {chosenProject = work[5]; setShowModal(true)}}>Watz Cook'n</button>         
-          <button className="button" onClick={() => {chosenProject = work[6]; setShowModal(true)}}>eCommerce</button>
+          <button className="button" onClick={() => {
+            chosenProject = work[0];
+            technologies = work[0].tech; 
+            setShowModal(true)}}
+            >Movies & Shows
+            </button>         
+          <button className="button" onClick={() => {
+            chosenProject = work[1]; 
+            technologies = work[1].tech;
+            setShowModal(true)}}
+            >Weather Dashboard
+            </button>         
+          <button className="button" onClick={() => {
+            chosenProject = work[2]; 
+            technologies = work[2].tech;
+            setShowModal(true)}}
+            >techBlog
+            </button>         
+          <button className="button" onClick={() => {
+            chosenProject = work[3]; 
+            technologies = work[3].tech;
+            setShowModal(true)}}
+            >Day Scheduler
+            </button>         
+          <button className="button" onClick={() => {
+            chosenProject = work[4]; 
+            technologies = work[4].tech;
+            setShowModal(true)}}
+            >Books And Beans
+            </button>         
+          <button className="button" onClick={() => {
+            chosenProject = work[5];
+            technologies = work[5].tech; 
+            setShowModal(true)}}
+            >Watz Cook'n
+            </button>         
+          <button className="button" onClick={() => {
+            chosenProject = work[6]; 
+            technologies = work[6].tech;
+            setShowModal(true)}}
+            >eCommerce
+            </button>
       </div> 
       <div className="root">
         { props.map(({ x, y, rot, scale }, i) => (
@@ -125,6 +221,14 @@ function Projects() {
     
           <Modal.Body>
             <p>{chosenProject.description}</p>
+            <h5>Technologies</h5>
+            <ul>
+              {technologies.map(tech =>{
+                return (
+                  <li>{tech}</li>
+                )
+              })}
+            </ul>
           </Modal.Body>
     
           <Modal.Footer>
