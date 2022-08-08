@@ -62,6 +62,8 @@ const work = [
       }
     ]
 
+    console.log(work[0].id);
+
 const p1 = work[0].id;
 const p2 = work[1].id;
 const p3 = work[2].id;
@@ -70,52 +72,74 @@ const p5 = work[4].id;
 const p6 = work[5].id;
 const p7 = work[6].id;
 
-const handlePopup = (project) => {
+// const [showModal, setShowModal] = useState(false);
+
+
+// const handlePopup = (project) => {
  
-function createModal(chosenProject) {
-  return (
-    <Modal.Dialog>
-    <Modal.Header closeButton>
-      <Modal.Title>{chosenProject.description}</Modal.Title>
-    </Modal.Header>
+// function createModal(chosenProject) {
+//   console.log(chosenProject)
+//   // const [showModal, setShowModal] = useState(false);
+//   return (
+//     <Modal
+//     size='lg'
+//     // show={showModal}
+//     // onHide={() => setShowModal(false)}>
+//     >
+//       <Modal.Header closeButton>
+//         <Modal.Title>{chosenProject.description}</Modal.Title>
+//       </Modal.Header>
 
-    {/* <Modal.Body>
-      <p>Modal body text goes here.</p>
-    </Modal.Body> */}
+//       {/* <Modal.Body>
+//         <p>Modal body text goes here.</p>
+//       </Modal.Body> */}
 
-    <Modal.Footer>
-      <Button variant="secondary" onClick={() => {document.location.href=`${chosenProject.github}`}}>GitHub</Button>
-      <Button variant="primary" onClick={() => {document.location.href=`${chosenProject.liveUrl}`}}>Live</Button>
-    </Modal.Footer>
-  </Modal.Dialog>
-  )
-}
+//       <Modal.Footer>
+//         <Button variant="secondary" onClick={() => {
+//           document.location.href=`${chosenProject.github}`; }}
+//           // 
+//           >
+//             GitHub
+//         </Button>
+//         <Button variant="primary" onClick={() => {document.location.href=`${chosenProject.liveUrl}`; }}
+//         // setShowModal(false)}}>
+//         >
+//           Live
+//         </Button>
+//       </Modal.Footer>
+//     </Modal>
+//   )
+// }
 
-switch (project) {
-  case p1:
-    createModal(work[0]);
-    break;
-  case p2:
-    createModal(work[1])
-    break;
-  case p3:   
-    createModal(work[2])
-    break;
-  case p4:   
-    createModal(work[3])
-    break;
-  case p5:   
-    createModal(work[4])
-    break;
-  case p6:   
-    createModal(work[5])
-    break;
-  case p7:    
-    createModal(work[6])
-    break;
-}
+// switch (project) {
+//   case p1:
+//     console.log({p1});
+//     console.log(work[0]);
+//     createModal(work[0]);
+//     break;
+//   case p2:
+//     createModal(work[1])
+//     break;
+//   case p3:   
+//     createModal(work[2])
+//     break;
+//   case p4:   
+//     createModal(work[3])
+//     break;
+//   case p5:   
+//     createModal(work[4])
+//     break;
+//   case p6:   
+//     createModal(work[5])
+//     break;
+//   case p7:    
+//     createModal(work[6])
+//     break;
+//   default:
+//       console.log({project})
+// }
 
-}
+// }
 
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
@@ -125,6 +149,78 @@ const from = i => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
 const trans = (r, s) => `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
 
 function Projects() {
+  const [showModal, setShowModal] = useState(false);
+
+
+  const handlePopup = (project) => {
+ 
+    function createModal(chosenProject) {
+      console.log(chosenProject)
+      // const [showModal, setShowModal] = useState(false);
+      return (
+        <Modal
+        size='lg'
+        show={showModal}
+        onHide={() => setShowModal(false)}>
+        
+          <Modal.Header closeButton>
+            <Modal.Title>{chosenProject.description}</Modal.Title>
+          </Modal.Header>
+    
+          {/* <Modal.Body>
+            <p>Modal body text goes here.</p>
+          </Modal.Body> */}
+    
+          <Modal.Footer>
+            <Button variant="secondary" onClick={() => {
+              document.location.href=`${chosenProject.github}`; setShowModal(false)}}
+              // 
+              >
+                GitHub
+            </Button>
+            <Button variant="primary" onClick={() => {document.location.href=`${chosenProject.liveUrl}`; 
+            setShowModal(false)}}>
+            
+              Live
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      )
+    }
+    
+    switch (project) {
+      case p1:
+        console.log({p1});
+        console.log(work[0]);
+        createModal(work[0]);
+        break;
+      case p2:
+        createModal(work[1])
+        break;
+      case p3:   
+        createModal(work[2])
+        break;
+      case p4:   
+        createModal(work[3])
+        break;
+      case p5:   
+        createModal(work[4])
+        break;
+      case p6:   
+        createModal(work[5])
+        break;
+      case p7:    
+        createModal(work[6])
+        break;
+      default:
+          console.log({project})
+    }
+    
+    }
+
+
+
+
   const [gone] = useState(() => new Set()) // The set flags all the cards that are flicked out
   const [props, set] = useSprings(cards.length, i => ({ ...to(i), from: from(i) })) // Create a bunch of springs using the helpers above
   // Create a gesture, we're interested in down-state, delta (current-pos - click-pos), direction and velocity
@@ -147,7 +243,7 @@ function Projects() {
     <React.Fragment>
       <div className="flex-row space-between">
           {/* <button className="button" onClick={() => {document.location.href='https://elsartz.github.io/movies-tv-shows/'}}>Movies & Shows</button> */}
-          <button className="button" onClick={() => handlePopup(p1)}>Movies & Shows</button>
+          <button className="button" onClick={() => {handlePopup(p1);console.log('p1button',p1);setShowModal(true);console.log(setShowModal)}}>Movies & Shows</button>
           {/* <button className="button" onClick={() => {document.location.href='https://book-and-beans.herokuapp.com/'}}>Books And Beans</button> */}
           <button className="button" onClick={() => handlePopup(p2)}>Weather Dashboard</button>
           {/* <button className="button" onClick={() => {document.location.href='https://www.youtube.com/watch?v=KYfFfXbpu_4&ab_channel=VardisSartzetakis'}}>eCommerce</button> */}
