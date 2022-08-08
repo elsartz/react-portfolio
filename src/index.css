@@ -285,3 +285,10 @@
   .navActive {
     color: var(--secondary);
   }
+
+  .btn-close {
+    background-color: var(--error);
+    content: 'Close';
+    color: var(--light);
+    font-size: 32px;
+  }
