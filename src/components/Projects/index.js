@@ -213,7 +213,8 @@ function Projects() {
     <Modal
         size='lg'
         show={showModal}
-        onHide={() => {console.log(chosenProject); setShowModal(false)}}>
+        onHide={() => {console.log(chosenProject); setShowModal(false)}}
+        >
         
           <Modal.Header closeButton>
             <Modal.Title >{chosenProject.id}</Modal.Title>
@@ -237,7 +238,7 @@ function Projects() {
               >
                 GitHub
             </Button>
-            <Button variant="secondary" onClick={() => {
+            <Button className="mx-1" variant="secondary" onClick={() => {
               document.location.href=`${chosenProject.liveUrl}`; setShowModal(false)}}
               >            
                 Live
