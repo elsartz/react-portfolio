@@ -7,9 +7,7 @@
    height: 100%;
    width: 100%;
    user-select: none;
-   /* position: fixed; */
-   overflow: hidden;
-
+  
   position: fixed;
   overflow: hidden;
   width: 100%;

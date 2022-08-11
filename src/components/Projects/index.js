@@ -216,8 +216,10 @@ function Projects() {
         onHide={() => {console.log(chosenProject); setShowModal(false)}}
         >
         
-          <Modal.Header closeButton>
-            <Modal.Title >{chosenProject.id}</Modal.Title>
+          <Modal.Header>
+            <Modal.Title className="mx-2">{chosenProject.id}</Modal.Title>
+            
+            <button className="btn-close" onClick={() => setShowModal(false)}>←</button>
           </Modal.Header>
     
           <Modal.Body>

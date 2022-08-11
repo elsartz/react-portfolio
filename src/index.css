@@ -288,7 +288,7 @@
 
   .btn-close {
     background-color: var(--error);
-    content: 'Close';
+    content: '←';
     color: var(--light);
-    font-size: 32px;
+    padding: 10px 15px;
   }
