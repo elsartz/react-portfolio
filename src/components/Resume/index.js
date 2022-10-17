@@ -13,7 +13,7 @@ function Resume() {
       </p>
       </div>
       <div>
-        <a href="https://docs.google.com/document/d/1Js8rx4eD9iJdsRXp07L8cKXn5J4wFQFl/edit?usp=sharing&ouid=115426358683394332298&rtpof=true&sd=true">Download .pdf</a> 
+        <a href="https://docs.google.com/document/d/1ZHeznNqi_JNbbK8HpnXtzWuV9TfRse4s/edit?usp=sharing&ouid=115426358683394332298&rtpof=true&sd=true">Download .pdf</a> 
       </div>
     </section>
   )
